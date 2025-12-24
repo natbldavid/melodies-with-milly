@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/basePath"; // adjust path if needed
 
 function SparkleIcon({ className }) {
   return (
