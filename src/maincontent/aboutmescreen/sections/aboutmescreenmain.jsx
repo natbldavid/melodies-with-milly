@@ -49,7 +49,7 @@ export default function AboutMeScreenMain() {
     >
       {/* Image */}
       <Image
-        src="/images/transparentmirabel.png"
+        src={`${basePath}/images/transparentmirabel.png`}
         alt="Milly"
         fill
         className="object-cover object-center"
