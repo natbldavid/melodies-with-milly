@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/basePath";
 
 /** Flower mask (same approach as your Hero) */
 function buildFlowerMaskSvg({
@@ -206,7 +207,7 @@ export default function HomeScreenCharacters() {
             labelBg="#FFF1E8"
             labelText="BEAUTY QUEEN"
             labelColor="#CE99AD"
-            imgSrc="/images/transparentbarbie.png"
+            imgSrc={`${basePath}/images/transparentbarbie.png`}
             imgAlt="Barbie character"
           />
 
@@ -218,7 +219,7 @@ export default function HomeScreenCharacters() {
             labelBg="#FFF2EB"
             labelText="PRINCESS BEAUTY"
             labelColor="#7684CE"
-            imgSrc="/images/transparentjasmin.png"
+            imgSrc={`${basePath}/images/transparentjasmin.png`}
             imgAlt="Jasmin character"
           />
 
@@ -229,7 +230,7 @@ export default function HomeScreenCharacters() {
             labelBg="#FFF1E8"
             labelText="MERMAID PRINCESS"
             labelColor="#CE98AE"
-            imgSrc="/images/transparentariel.png"
+            imgSrc={`${basePath}/images/transparentariel.png`}
             imgAlt="Ariel character"
           />
 
@@ -242,7 +243,7 @@ export default function HomeScreenCharacters() {
             labelBg="#FEF1E8"
             labelText="AND MORE ->"
             labelColor="#729EAB"
-            imgSrc="/images/transparentmirabel.png"
+            imgSrc={`${basePath}/images/transparentmirabel.png`}
             imgAlt="Mirabel character"
           />
         </div>

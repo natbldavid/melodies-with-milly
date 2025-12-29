@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/basePath";
+
 
 function StarIcon({ className }) {
   return (
@@ -70,7 +72,7 @@ export default function HomeScreenAboutMe() {
                 {/* Background texture behind the mask */}
 <div className="absolute inset-0 z-0 -translate-y-22 md:-translate-y-25 lg:-translate-y-10 scale-100 sm:scale-100 lg:scale-150">
   <Image
-    src="/images/transparentwaveimage.png"
+    src={`${basePath}/images/transparentwaveimage.png`}
     alt=""
     fill
     className="object-cover"
@@ -84,8 +86,8 @@ export default function HomeScreenAboutMe() {
       backgroundRepeat: "repeat",
       backgroundSize: "200px 200px",
 
-      WebkitMaskImage: `url("/images/transparentwaveimage.png")`,
-      maskImage: `url("/images/transparentwaveimage.png")`,
+      WebkitMaskImage: `url(${basePath}/images/transparentwaveimage.png)`,
+      maskImage: `url(${basePath}/images/transparentwaveimage.png)`,
       WebkitMaskRepeat: "no-repeat",
       maskRepeat: "no-repeat",
       WebkitMaskSize: "cover",
@@ -98,7 +100,7 @@ export default function HomeScreenAboutMe() {
                 {/* Daisy in the middle */}
                 <div className="absolute left-1/2 top-1/2 -translate-y-1/2 z-20 translate-x-10 sm:translate-x-14 md:translate-x-14 lg:translate-x-16 w-24 h-24 sm:w-28 sm:h-28 md:w-38 md:h-38">
                   <Image
-                    src="/images/daisyfloweric.png"
+                    src={`${basePath}/images/daisyfloweric.png`}
                     alt=""
                     fill
                     className="object-contain"
@@ -129,7 +131,7 @@ export default function HomeScreenAboutMe() {
                 >
                   <div className="relative w-full h-full">
                     <Image
-                      src="/images/transparentsaboutme.png"
+                      src={`${basePath}/images/transparentsaboutme.png`}
                       alt="About Milly"
                       fill
                       className="object-cover object-[50%_35%]"

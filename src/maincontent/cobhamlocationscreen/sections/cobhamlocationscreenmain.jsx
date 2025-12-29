@@ -305,7 +305,7 @@ Our talented performers at Melodies with Milly are specially trained to embody t
 From the icy elegance of Our Ice Queen to Our Mermaid Princess, our entertainers fully commit to the character through elaborate costumes, spot-on mannerisms, fantastic singing voices and movie-accurate looks. They engage the children with storytelling, singalongs, and interactive games.
 
 We have a broad selection of princess and character packages to suit events of any size and age group in Cobham. Our entertainers captivate with their acting talent and energetic presence, ensuring your party is fun, memorable + truly magical!"
-            imageSrc={`/images/transparentmirabel.png`}
+            imageSrc={`${basePath}/images/transparentmirabel.png`}
             imageAlt="Location section one"
             flip={false}
             variant="shadow" // requested: “shadow” style like About screen
@@ -318,7 +318,7 @@ We have a broad selection of princess and character packages to suit events of a
 From Disney-inspired princesses like Mirabel and Rapunzel to Frozen's beloved Elsa or The Arabian Princess Jasmine, your child can meet their most-adored character brought vividly to life. 
 
 Offering fully bespoke party packages, we work closely with you to understand your child's unique interests, crafting a bespoke party experience that fires their imagination."
-            imageSrc={`/images/transparentariel.png`}
+            imageSrc={`${basePath}/images/transparentariel.png`}
             imageAlt="Location section two"
             flip={true}
             variant="flower" // requested: flower mask like HomeScreenAboutMe

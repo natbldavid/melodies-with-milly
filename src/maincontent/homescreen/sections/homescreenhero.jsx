@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { basePath } from "@/lib/basePath";
 
 function StarIcon({ className }) {
   return (
@@ -191,7 +192,7 @@ export default function HomeScreenHero() {
     md:w-28 md:h-28
     lg:w-40 lg:h-40">
                 <Image
-                  src="/images/daisyfloweric.png"
+                  src={`${basePath}/images/daisyfloweric.png`}
                   alt=""
                   fill
                   className="object-contain"
@@ -208,7 +209,7 @@ export default function HomeScreenHero() {
     md:w-20 md:h-20
     lg:w-32 lg:h-32">
                 <Image
-                  src="/images/daisyfloweric.png"
+                  src={`${basePath}/images/daisyfloweric.png`}
                   alt=""
                   fill
                   className="object-contain"
@@ -233,7 +234,7 @@ export default function HomeScreenHero() {
               >
                 <div className="relative w-full h-full">
                   <Image
-                    src="/images/transparentmwmheroimage.png"
+                    src={`${basePath}/images/transparentmwmheroimage.png`}
                     alt="Milly"
                     fill
                     className="

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/basePath";
 import { useState } from "react";
 
 /** Flower mask (same approach as your Hero) */
@@ -266,7 +267,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="BEAUTY QUEEN"
             labelColor="#CE99AD"
-            imgSrc="/images/transparentbarbie.png"
+            imgSrc={`${basePath}/images/transparentbarbie.png`}
             imgAlt="Barbie character"
             power="My power is..."
           />
@@ -279,7 +280,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="PRINCESS BEAUTY"
             labelColor="#7684CE"
-            imgSrc="/images/transparentjasmin.png"
+            imgSrc={`${basePath}/images/transparentjasmin.png`}
             imgAlt="Jasmin character"
             power="My power is..."
           />
@@ -291,7 +292,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="MERMAID PRINCESS"
             labelColor="#CE98AE"
-            imgSrc="/images/transparentariel.png"
+            imgSrc={`${basePath}/images/transparentariel.png`}
             imgAlt="Ariel character"
             power="My power is..."
           />
@@ -304,7 +305,7 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="COLOMBIAN PRINCESS"
             labelColor="#729EAB"
-            imgSrc="/images/transparentmirabel.png"
+            imgSrc={`${basePath}/images/transparentmirabel.png`}
             imgAlt="Mirabel character"
             power="My power is..."
           />
@@ -316,7 +317,7 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="SOUTHERN PRINCESS"
             labelColor="#729EAB"
-            imgSrc="/images/transparentmwmheroimage.png"
+            imgSrc={`${basePath}/images/transparentmwmheroimage.png`}
             imgAlt="Mirabel character"
             power="My power is..."
           />
@@ -327,7 +328,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="CARIBBEAN MERMAID"
             labelColor="#CE98AE"
-            imgSrc="/images/transparentsaboutme.png"
+            imgSrc={`${basePath}/images/transparentsaboutme.png`}
             imgAlt="Ariel character"
             power="My power is..."
           />
@@ -339,7 +340,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="ARABIAN PRINCESS"
             labelColor="#7684CE"
-            imgSrc="/images/transparentjasmine.png"
+            imgSrc={`${basePath}/images/transparentjasmine.png`}
             imgAlt="Jasmin character"
             power="My power is..."
           />
@@ -350,7 +351,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="SNOW SISTER"
             labelColor="#CE99AD"
-            imgSrc="/images/transparentanna.png"
+            imgSrc={`${basePath}/images/transparentanna.png`}
             imgAlt="Barbie character"
             power="My power is..."
           />
@@ -361,7 +362,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="SNOW QUEEN"
             labelColor="#CE99AD"
-            imgSrc="/images/transparentelsa.png"
+            imgSrc={`${basePath}/images/transparentelsa.png`}
             imgAlt="Barbie character"
             power="My power is..."
           />
@@ -374,7 +375,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="TOWER PRINCESS"
             labelColor="#7684CE"
-            imgSrc="/images/transparentrapunzel.png"
+            imgSrc={`${basePath}/images/transparentrapunzel.png`}
             imgAlt="Jasmin character"
             power="My power is..."
           />
@@ -386,7 +387,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="SPIDER-HERO"
             labelColor="#CE98AE"
-            imgSrc="/images/transparentspiderman2.avif"
+            imgSrc={`${basePath}/images/transparentspiderman2.avif`}
             imgAlt="Ariel character"
             power="My power is..."
           />
@@ -399,7 +400,7 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="THE GOOD WITCH"
             labelColor="#729EAB"
-            imgSrc="/images/transparentgoodwitch.png"
+            imgSrc={`${basePath}/images/transparentgoodwitch.png`}
             imgAlt="Mirabel character"
             power="My power is..."
           />
@@ -411,7 +412,7 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="POLYNESIAN PRINCESS"
             labelColor="#729EAB"
-            imgSrc="/images/transparentmoana.png"
+            imgSrc={`${basePath}/images/transparentmoana.png`}
             imgAlt="Mirabel character"
             power="My power is..."
           />
@@ -422,7 +423,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="QUEEN OF MEAN"
             labelColor="#CE98AE"
-            imgSrc="/images/transparentqueenofmean.png"
+            imgSrc={`${basePath}/images/transparentqueenofmean.png`}
             imgAlt="Ariel character"
             power="My power is..."
           />
@@ -434,7 +435,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="MELODY, THE FAIRY PRINCESS"
             labelColor="#7684CE"
-            imgSrc="/images/transparentmelody.png"
+            imgSrc={`${basePath}/images/transparentmelody.png`}
             imgAlt="Jasmin character"
             power="My power is..."
           />
@@ -445,7 +446,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="WINNIE THE WITCH"
             labelColor="#CE99AD"
-            imgSrc="/images/transparentwinnie.png"
+            imgSrc={`${basePath}/images/transparentwinnie.png`}
             imgAlt="Barbie character"
             power="My power is..."
           />
@@ -456,7 +457,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="STARRY PRINCESS"
             labelColor="#CE99AD"
-            imgSrc="/images/transparentstarry.png"
+            imgSrc={`${basePath}/images/transparentstarry.png`}
             imgAlt="Barbie character"
             power="My power is..."
           />
@@ -469,7 +470,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="PRINCESS BEAUTY"
             labelColor="#7684CE"
-            imgSrc="/images/transparentjasmin.png"
+            imgSrc={`${basePath}/images/transparentjasmin.png`}
             imgAlt="Jasmin character"
             power="My power is..."
           />
@@ -481,7 +482,7 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="ENTERTAINER"
             labelColor="#CE98AE"
-            imgSrc="/images/transparentnoncharacter.png"
+            imgSrc={`${basePath}/images/transparentnoncharacter.png`}
             imgAlt="Ariel character"
             power="My power is..."
           />
@@ -494,7 +495,7 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="MELODY THE ELF"
             labelColor="#729EAB"
-            imgSrc="/images/transparentelf.png"
+            imgSrc={`${basePath}/images/transparentelf.png`}
             imgAlt="Mirabel character"
             power="My power is..."
           />

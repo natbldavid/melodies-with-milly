@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { basePath } from "@/lib/basePath";
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
@@ -92,7 +93,7 @@ useEffect(() => {
         <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
 <div className="relative w-23 h-23 md:w-32 md:h-32">
   <Image
-    src="/images/mwmlogoofficial.png"
+    src={`${basePath}/images/mwmlogoofficial.png`}
     alt="Children's Parties logo"
     fill
     className="object-contain"
@@ -319,7 +320,7 @@ useEffect(() => {
       >
         <span className="relative block h-full w-full">
           <Image
-            src="/images/mwmlogoofficialsmall.png"
+            src={`${basePath}/images/mwmlogoofficialsmall.png`}
             alt=""
             fill
             className="object-contain p-2"

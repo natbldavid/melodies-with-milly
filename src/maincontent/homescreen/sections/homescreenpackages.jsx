@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/basePath";
 
 function PackageCard({ href, bg, imgSrc, imgAlt, title, imageOffsetY="translate-y-0" }) {
   return (
@@ -70,7 +71,7 @@ export default function HomeScreenPackages() {
           <PackageCard
             href="/aboutme"
             bg="#FEE1B7"
-            imgSrc="/images/transparentanna.png"
+            imgSrc={`${basePath}/images/transparentanna.png`}
             imgAlt="One entertainer package"
             title="One Entertainer Packages"
             imageOffsetY="translate-y-20 md:translate-y-10 lg:translate-y-20"
@@ -79,7 +80,7 @@ export default function HomeScreenPackages() {
           <PackageCard
             href="/aboutme"
             bg="#FFD6CE"
-            imgSrc="/images/transparenttwocharacters.png"
+            imgSrc={`${basePath}/images/transparenttwocharacters.png`}
             imgAlt="Two entertainer package"
             title="Two Entertainer Packages"
           />
@@ -87,7 +88,7 @@ export default function HomeScreenPackages() {
           <PackageCard
             href="/aboutme"
             bg="#A1EABC"
-            imgSrc="/images/transparentvirtual.png"
+            imgSrc={`${basePath}/images/transparentvirtual.png`}
             imgAlt="Virtual package"
             title="Virtual Packages"
             imageOffsetY="-translate-y-15 md:-translate-y-8 lg:-translate-y-15"
