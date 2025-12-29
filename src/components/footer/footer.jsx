@@ -82,7 +82,7 @@ export default function Footer() {
               </SocialIcon>
             </div>
             <div className="mt-4">
-            <Link href="/faq" className="font-semibold hover:opacity-80 transition-opacity">
+            <Link href="/faqs" className="font-semibold hover:opacity-80 transition-opacity">
                 FAQs
               </Link>
               </div>

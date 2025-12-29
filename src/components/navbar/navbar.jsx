@@ -158,6 +158,14 @@ useEffect(() => {
         >
             ENQUIRIES
             </Link>
+                <Link
+          href="/packages"
+          className={`text-white font-bold pb-1 ${
+            isActive('/packages') ? 'border-b-2 border-white' : 'hover:text-blue-100'
+        }`}
+        >
+            PACKAGES
+            </Link>
         </div>
       </div>
 
@@ -237,6 +245,15 @@ useEffect(() => {
 }`}
 >
     ENQUIRIES
+</Link>
+                <Link
+                href="/packages"
+                onClick={() => setIsMenuOpen(false)}
+                className={`font-semibold tracking-tight text-4xl sm:text-5xl ${
+                isActive('/packages') ? 'text-[#EBA1BB]' : 'text-[#9CA9F9]'
+}`}
+>
+    PACKAGES
 </Link>
               </div>
             </div>
