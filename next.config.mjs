@@ -1,22 +1,21 @@
 /** @type {import('next').NextConfig} */
 
 // On GitHub Actions, GITHUB_REPOSITORY looks like "username/repo"
-const repo =
-  process.env.GITHUB_REPOSITORY?.split("/")[1] ??
-  ""; // fallback for local dev
-
+const repo = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
 const isProd = process.env.NODE_ENV === "production";
 
+// Prefer explicit env var (lets your app code and Next config agree),
+// otherwise fall back to repo name in GitHub Actions.
+const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH ||
+  (isProd && repo ? `/${repo}` : "");
+
 const nextConfig = {
-  // This makes Next.js output a static site to the /out folder
   output: "export",
-
-  // Required for GitHub Pages because Next/Image optimization needs a server
+  trailingSlash: true, // strongly recommended for GitHub Pages + static export
   images: { unoptimized: true },
-
-  // Required for GitHub Pages project sites: https://username.github.io/<repo>/
-  basePath: isProd && repo ? `/${repo}` : "",
-  assetPrefix: isProd && repo ? `/${repo}/` : "",
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : "",
 };
 
 export default nextConfig;
