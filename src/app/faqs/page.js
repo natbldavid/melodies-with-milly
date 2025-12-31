@@ -1,8 +1,8 @@
 import FAQ from '@/maincontent/faqscreen/faqscreen';
 
 export const metadata = {
-  title: 'FAQ - Children\'s Parties',
-  description: 'Welcome to our children\'s party planning services',
+  title: 'FAQs | Melodies with Milly',
+  description: 'Get to know Melodies With Milly and have your questions answered',
 };
 
 export default function FAQScreen() {

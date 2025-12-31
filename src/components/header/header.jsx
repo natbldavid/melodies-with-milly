@@ -39,7 +39,7 @@ export default function Header() {
         >
           {/* Facebook Icon */}
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/melodieswithmilly"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -55,7 +55,7 @@ export default function Header() {
 
           {/* Instagram Icon */}
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/melodieswithmilly/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -69,19 +69,19 @@ export default function Header() {
             </svg>
           </a>
 
-          {/* Twitter Icon */}
+          {/* TikTok Icon */}
           <a
-            href="https://twitter.com"
+            href="https://www.tiktok.com/@melodieswithmilly"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter"
+            aria-label="TikTok"
           >
             <svg
               className="w-5 h-5 text-white hover:opacity-80 transition-opacity"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
-              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+              <path d="M16.65 1c.27 2.24 1.58 4.02 3.73 5.03v3.64c-1.96.12-3.66-.52-5.16-1.55v7.36c0 4.5-3.87 8.15-8.63 7.46-3.1-.46-5.66-2.9-6.06-6.01C.03 13.2 3.83 9.5 8.5 9.5c.37 0 .73.03 1.08.1v3.98c-.33-.1-.69-.16-1.08-.16-1.94 0-3.49 1.6-3.28 3.57.14 1.32 1.22 2.4 2.54 2.54 1.97.21 3.57-1.34 3.57-3.28V1h4.32z" />
             </svg>
           </a>
         </div>

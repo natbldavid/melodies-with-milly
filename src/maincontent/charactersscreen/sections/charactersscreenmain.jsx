@@ -215,7 +215,7 @@ function CharacterCard({
 
           <div className="w-full flex justify-center pb-1">
             <Link
-              href="/aboutme"
+              href="/enquiries"
               className="
                 pointer-events-auto
                 inline-flex items-center justify-center
@@ -267,9 +267,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="BEAUTY QUEEN"
             labelColor="#CE99AD"
-            imgSrc={`${basePath}/images/transparentbarbie.png`}
-            imgAlt="Barbie character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/beauty-queen-princess-party-entertainer.avif`}
+            imgAlt="Beauty queen character costume"
+            power="Always looking fabulous and empowering women!"
           />
 
           <CharacterCard
@@ -280,9 +280,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="PRINCESS BEAUTY"
             labelColor="#7684CE"
-            imgSrc={`${basePath}/images/transparentjasmin.png`}
-            imgAlt="Jasmin character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/princess-beauty-princess-party-entertainer.avif`}
+            imgAlt="Princess Beauty character costume"
+            power="Talking to cutlery and tableware"
           />
 
           <CharacterCard
@@ -292,9 +292,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="MERMAID PRINCESS"
             labelColor="#CE98AE"
-            imgSrc={`${basePath}/images/transparentariel.png`}
-            imgAlt="Ariel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/ariel-princess-party-entertainer.avif`}
+            imgAlt="Mermaid Princess character costume"
+            power="Fantastic swimmer & very adventurous"
           />
 
           <CharacterCard
@@ -305,9 +305,9 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="COLOMBIAN PRINCESS"
             labelColor="#729EAB"
-            imgSrc={`${basePath}/images/transparentmirabel.png`}
-            imgAlt="Mirabel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/colombian-princess-party-entertainer.avif`}
+            imgAlt="Colombian Princess character costume"
+            power="Being the heart of her familia and community"
           />
           <CharacterCard
             boxBg="#BDE3D8"
@@ -317,9 +317,9 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="SOUTHERN PRINCESS"
             labelColor="#729EAB"
-            imgSrc={`${basePath}/images/transparentmwmheroimage.png`}
-            imgAlt="Mirabel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/southern-princess-party-entertainer.avif`}
+            imgAlt="Southern Princess character costume"
+            power="Creating the most magical gumbo & beignets"
           />
           <CharacterCard
             boxBg="#FDDFDF"
@@ -328,9 +328,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="CARIBBEAN MERMAID"
             labelColor="#CE98AE"
-            imgSrc={`${basePath}/images/transparentsaboutme.png`}
-            imgAlt="Ariel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/caribbean-mermaid-princess-party-entertainer.avif`}
+            imgAlt="Caribbean Mermaid character costume"
+            power="Beautiful voice "
           />
           <CharacterCard
             boxBg="#BFC2F5"
@@ -340,9 +340,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="ARABIAN PRINCESS"
             labelColor="#7684CE"
-            imgSrc={`${basePath}/images/transparentjasmine.png`}
-            imgAlt="Jasmin character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/arabian-princess-party-entertainer.avif`}
+            imgAlt="Arabian Princess character costume"
+            power="Being compassionate, speaking to genies and flying on magic carpets"
           />
           <CharacterCard
             boxBg="#FDDFDF"
@@ -351,20 +351,20 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="SNOW SISTER"
             labelColor="#CE99AD"
-            imgSrc={`${basePath}/images/transparentanna.png`}
-            imgAlt="Barbie character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/snow-sister-princess-party-entertainer.avif`}
+            imgAlt="Snow Sister character costume"
+            power="Staying positive, being the best sister and Princess to her town"
           />
           <CharacterCard
             boxBg="#FDDFDF"
             maskType="flower"
             maskBg="#A3DDD1"
             labelBg="#FFF1E8"
-            labelText="SNOW QUEEN"
+            labelText="ICE QUEEN"
             labelColor="#CE99AD"
-            imgSrc={`${basePath}/images/transparentelsa.png`}
-            imgAlt="Barbie character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/ice-queen-princess-party-entertainer.avif`}
+            imgAlt="Ice Queen character costume"
+            power="Ability to create snowstorms and form ice"
           />
 
           <CharacterCard
@@ -375,9 +375,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="TOWER PRINCESS"
             labelColor="#7684CE"
-            imgSrc={`${basePath}/images/transparentrapunzel.png`}
-            imgAlt="Jasmin character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/tower-princess-party-entertainer.avif`}
+            imgAlt="Tower Princess character costume"
+            power="Healing the sick with her lustrous long hair"
           />
 
           <CharacterCard
@@ -387,9 +387,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="SPIDER-HERO"
             labelColor="#CE98AE"
-            imgSrc={`${basePath}/images/transparentspiderman2.avif`}
-            imgAlt="Ariel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/spider-hero-princess-party-entertainer.avif`}
+            imgAlt="Spider-Hero character costume"
+            power="Acrobatics and shooting webs"
           />
 
           <CharacterCard
@@ -400,9 +400,9 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="THE GOOD WITCH"
             labelColor="#729EAB"
-            imgSrc={`${basePath}/images/transparentgoodwitch.png`}
-            imgAlt="Mirabel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/good-witch-princess-party-entertainer.avif`}
+            imgAlt="Good Witch character costume"
+            power="Being popular"
           />
           <CharacterCard
             boxBg="#BDE3D8"
@@ -412,9 +412,9 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="POLYNESIAN PRINCESS"
             labelColor="#729EAB"
-            imgSrc={`${basePath}/images/transparentmoana.png`}
-            imgAlt="Mirabel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/polynesian-princess-party-entertainer.avif`}
+            imgAlt="Polynesian Princess character costume"
+            power="Connection with the sea"
           />
           <CharacterCard
             boxBg="#FDDFDF"
@@ -423,9 +423,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="QUEEN OF MEAN"
             labelColor="#CE98AE"
-            imgSrc={`${basePath}/images/transparentqueenofmean.png`}
-            imgAlt="Ariel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/mean-queen-princess-party-entertainer.avif`}
+            imgAlt="Queen of Mean character costume"
+            power="Being mean"
           />
           <CharacterCard
             boxBg="#BFC2F5"
@@ -435,9 +435,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="MELODY, THE FAIRY PRINCESS"
             labelColor="#7684CE"
-            imgSrc={`${basePath}/images/transparentmelody.png`}
-            imgAlt="Jasmin character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/the-fairy-princess-party-entertainer.avif`}
+            imgAlt="Fairy Princess character costume"
+            power="Being kind and lots of fun"
           />
           <CharacterCard
             boxBg="#FDDFDF"
@@ -446,9 +446,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="WINNIE THE WITCH"
             labelColor="#CE99AD"
-            imgSrc={`${basePath}/images/transparentwinnie.png`}
-            imgAlt="Barbie character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/the-witch-princess-party-entertainer.avif`}
+            imgAlt="The Witch character costume"
+            power="Creating spells"
           />
           <CharacterCard
             boxBg="#FDDFDF"
@@ -457,9 +457,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="STARRY PRINCESS"
             labelColor="#CE99AD"
-            imgSrc={`${basePath}/images/transparentstarry.png`}
-            imgAlt="Barbie character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/starry-princess-party-entertainer.avif`}
+            imgAlt="Starry Princess character costume"
+            power="Dreaming big and inspiring others"
           />
 
           <CharacterCard
@@ -470,9 +470,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF2EB"
             labelText="PRINCESS BEAUTY"
             labelColor="#7684CE"
-            imgSrc={`${basePath}/images/transparentjasmin.png`}
-            imgAlt="Jasmin character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/princess-beauty-princess-party-entertainer.avif`}
+            imgAlt="Princess Beauty character costume"
+            power="Always looking fabulous and empowering women!"
           />
 
           <CharacterCard
@@ -482,9 +482,9 @@ export default function CharactersScreenMain() {
             labelBg="#FFF1E8"
             labelText="ENTERTAINER"
             labelColor="#CE98AE"
-            imgSrc={`${basePath}/images/transparentnoncharacter.png`}
-            imgAlt="Ariel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/entertainer-princess-party-entertainer.avif`}
+            imgAlt="Entertainer character costume"
+            power="Entertaining lots of children"
           />
 
           <CharacterCard
@@ -495,9 +495,9 @@ export default function CharactersScreenMain() {
             labelBg="#FEF1E8"
             labelText="MELODY THE ELF"
             labelColor="#729EAB"
-            imgSrc={`${basePath}/images/transparentelf.png`}
-            imgAlt="Mirabel character"
-            power="My power is..."
+            imgSrc={`${basePath}/images/the-elf-princess-party-entertainer.avif`}
+            imgAlt="The Elf character costume"
+            power="Checking who's naughty or nice and being Santa's best helper"
           />
         </div>
       </div>

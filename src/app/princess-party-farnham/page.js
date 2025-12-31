@@ -1,8 +1,8 @@
 import FARNHAM from '@/maincontent/farnhamlocationscreen/farnhamlocationscreen';
 
 export const metadata = {
-  title: 'Princess Parties - Farnham - Children\'s Parties',
-  description: 'Welcome to our children\'s party planning services',
+  title: 'Princess Parties Farnham | Party Packages | Melodies with Milly',
+  description: 'Princess parties in Farnham - explore more!',
 };
 
 export default function Farmham() {

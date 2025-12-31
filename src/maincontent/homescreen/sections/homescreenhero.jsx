@@ -192,7 +192,7 @@ export default function HomeScreenHero() {
     md:w-28 md:h-28
     lg:w-40 lg:h-40">
                 <Image
-                  src={`${basePath}/images/daisyfloweric.png`}
+                  src={`${basePath}/images/daisyfloweric.avif`}
                   alt=""
                   fill
                   className="object-contain"
@@ -209,7 +209,7 @@ export default function HomeScreenHero() {
     md:w-20 md:h-20
     lg:w-32 lg:h-32">
                 <Image
-                  src={`${basePath}/images/daisyfloweric.png`}
+                  src={`${basePath}/images/daisyfloweric.avif`}
                   alt=""
                   fill
                   className="object-contain"
@@ -234,8 +234,8 @@ export default function HomeScreenHero() {
               >
                 <div className="relative w-full h-full">
                   <Image
-                    src={`${basePath}/images/transparentmwmheroimage.png`}
-                    alt="Milly"
+                    src={`${basePath}/images/southern-princess-party-entertainer.avif`}
+                    alt="Princess entertainer smiling in costume"
                     fill
                     className="
                       object-cover

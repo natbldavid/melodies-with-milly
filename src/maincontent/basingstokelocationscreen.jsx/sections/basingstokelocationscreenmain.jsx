@@ -72,7 +72,7 @@ function MaskedImageFlower({
       {/* Optional texture behind the mask (same structure as your HomeScreenAboutMe) */}
       <div className="absolute inset-0 z-0 -translate-y-10 scale-100 sm:scale-100 lg:scale-125">
         <Image
-          src={`${basePath}/images/transparentwaveimage.png`}
+          src={`${basePath}/images/transparentwaveimage.avif`}
           alt=""
           fill
           className="object-cover"
@@ -84,8 +84,8 @@ function MaskedImageFlower({
             backgroundImage: `url("${GRAIN_URL}")`,
             backgroundRepeat: "repeat",
             backgroundSize: "200px 200px",
-            WebkitMaskImage: `url("${basePath}/images/transparentwaveimage.png")`,
-            maskImage: `url("${basePath}/images/transparentwaveimage.png")`,
+            WebkitMaskImage: `url("${basePath}/images/transparentwaveimage.avif")`,
+            maskImage: `url("${basePath}/images/transparentwaveimage.avif")`,
             WebkitMaskRepeat: "no-repeat",
             maskRepeat: "no-repeat",
             WebkitMaskSize: "cover",
@@ -101,7 +101,7 @@ function MaskedImageFlower({
           {/* Daisy + sparkles (optional, keeps the “home” aesthetic) */}
           <div className="absolute left-1/2 top-1/2 -translate-y-1/2 z-20 translate-x-10 sm:translate-x-14 md:translate-x-14 lg:translate-x-16 w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36">
             <Image
-              src={`${basePath}/images/daisyfloweric.png`}
+              src={`${basePath}/images/daisyfloweric.avif`}
               alt=""
               fill
               className="object-contain"
@@ -305,8 +305,8 @@ Our talented performers at Melodies with Milly are specially trained to embody t
 From the icy elegance of Our Ice Queen to Our Mermaid Princess, our entertainers fully commit to the character through elaborate costumes, spot-on mannerisms, fantastic singing voices and movie-accurate looks. They engage the children with storytelling, singalongs, and interactive games.
 
 We have a broad selection of princess and character packages to suit events of any size and age group in Basingstoke. Our entertainers captivate with their acting talent and energetic presence, ensuring your party is fun, memorable + truly magical!"
-            imageSrc={`${basePath}/images/transparentmirabel.png`}
-            imageAlt="Location section one"
+            imageSrc={`${basePath}/images/colombian-princess-party-entertainer.avif`}
+            imageAlt="Children’s party princess entertainer in costume"
             flip={false}
             variant="shadow" // requested: “shadow” style like About screen
           />
@@ -318,8 +318,8 @@ We have a broad selection of princess and character packages to suit events of a
 From Disney-inspired princesses like Mirabel and Rapunzel to Frozen's beloved Elsa or The Arabian Princess Jasmine, your child can meet their most-adored character brought vividly to life. 
 
 Offering fully bespoke party packages, we work closely with you to understand your child's unique interests, crafting a bespoke party experience that fires their imagination."
-            imageSrc={`${basePath}/images/transparentariel.png`}
-            imageAlt="Location section two"
+            imageSrc={`${basePath}/images/ariel-princess-party-entertainer.avif`}
+            imageAlt="Mermaid princess party entertainer in costume"
             flip={true}
             variant="flower" // requested: flower mask like HomeScreenAboutMe
           />
@@ -334,8 +334,8 @@ Children will be swept away as their preferred Disney-inspired princess comes al
 ​
 
 As one of Hampshire and London’s top-rated character party providers, Melodies with Milly has delivered the magic of dreamy princess celebrations to countless events in Basingstoke and surrounding areas. We offer flexible packages and pricing, working closely with you to make your child's event a truly unforgettable experience!"
-            imageSrc={`${basePath}/images/transparentsaboutme.png`}
-            imageAlt="Location section three"
+            imageSrc={`${basePath}/images/caribbean-mermaid-princess-party-entertainer.avif`}
+            imageAlt="Children’s party princess entertainer smiling in costume"
             flip={false}
             variant="square" // requested: include a square mask option too
           />

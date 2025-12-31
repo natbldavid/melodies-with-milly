@@ -1,8 +1,8 @@
 import AboutMeScreen from '@/maincontent/aboutmescreen/aboutmescreen';
 
 export const metadata = {
-  title: 'About Me - Children\'s Parties',
-  description: 'Learn more about our children\'s party planning expertise',
+  title: 'About Me | Melodies with Milly',
+  description: 'Learn more about Melodies With Milly and why we are the perfect fit for your party!',
 };
 
 export default function AboutMePage() {

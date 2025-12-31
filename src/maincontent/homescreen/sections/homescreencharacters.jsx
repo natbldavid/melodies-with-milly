@@ -207,8 +207,8 @@ export default function HomeScreenCharacters() {
             labelBg="#FFF1E8"
             labelText="BEAUTY QUEEN"
             labelColor="#CE99AD"
-            imgSrc={`${basePath}/images/transparentbarbie.png`}
-            imgAlt="Barbie character"
+            imgSrc={`${basePath}/images/beauty-queen-princess-party-entertainer.avif`}
+            imgAlt="Beauty Queen character costume"
           />
 
           <CharacterCard
@@ -219,8 +219,8 @@ export default function HomeScreenCharacters() {
             labelBg="#FFF2EB"
             labelText="PRINCESS BEAUTY"
             labelColor="#7684CE"
-            imgSrc={`${basePath}/images/transparentjasmin.png`}
-            imgAlt="Jasmin character"
+            imgSrc={`${basePath}/images/princess-beauty-princess-party-entertainer.avif`}
+            imgAlt="Princess Beauty character costume"
           />
 
           <CharacterCard
@@ -230,8 +230,8 @@ export default function HomeScreenCharacters() {
             labelBg="#FFF1E8"
             labelText="MERMAID PRINCESS"
             labelColor="#CE98AE"
-            imgSrc={`${basePath}/images/transparentariel.png`}
-            imgAlt="Ariel character"
+            imgSrc={`${basePath}/images/ariel-princess-party-entertainer.avif`}
+            imgAlt="Mermaid Princess character costume"
           />
 
           <CharacterCard
@@ -243,8 +243,8 @@ export default function HomeScreenCharacters() {
             labelBg="#FEF1E8"
             labelText="AND MORE ->"
             labelColor="#729EAB"
-            imgSrc={`${basePath}/images/transparentmirabel.png`}
-            imgAlt="Mirabel character"
+            imgSrc={`${basePath}/images/colombian-princess-party-entertainer.avif`}
+            imgAlt="Mirabel character costume"
           />
         </div>
       </div>

@@ -69,34 +69,34 @@ export default function HomeScreenPackages() {
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           <PackageCard
-            href="/aboutme"
+            href="/packages"
             bg="#FEE1B7"
-            imgSrc={`${basePath}/images/transparentanna.png`}
-            imgAlt="One entertainer package"
+            imgSrc={`${basePath}/images/snow-sister-princess-party-entertainer.avif`}
+            imgAlt="One princess entertainment packages"
             title="One Entertainer Packages"
             imageOffsetY="translate-y-20 md:translate-y-10 lg:translate-y-20"
           />
 
           <PackageCard
-            href="/aboutme"
+            href="/packages"
             bg="#FFD6CE"
-            imgSrc={`${basePath}/images/transparenttwocharacters.png`}
-            imgAlt="Two entertainer package"
+            imgSrc={`${basePath}/images/two-entertainer-princess.avif`}
+            imgAlt="Two Princess entertainment packages"
             title="Two Entertainer Packages"
           />
 
           <PackageCard
-            href="/aboutme"
+            href="/packages"
             bg="#A1EABC"
-            imgSrc={`${basePath}/images/transparentvirtual.png`}
-            imgAlt="Virtual package"
+            imgSrc={`${basePath}/images/virtual-package-princess.avif`}
+            imgAlt="Princess virtual entertainment packages"
             title="Virtual Packages"
             imageOffsetY="-translate-y-15 md:-translate-y-8 lg:-translate-y-15"
           />
         </div>
   <div className="mt-10 sm:mt-10 flex justify-center">
     <Link
-      href="/aboutme"
+      href="/packages"
       className="
         inline-flex items-center justify-center rounded-full
         px-12 py-3 text-sm sm:px-20 sm:py-3 sm:text-base

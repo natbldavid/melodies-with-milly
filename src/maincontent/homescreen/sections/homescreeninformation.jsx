@@ -39,15 +39,15 @@ export default function HomeScreenInformation() {
 
           <InfoCard emoji="📍" title="Many locations">
             Elevate your parties in{" "}
-            <Link href="/aboutme" className="font-bold underline underline-offset-2 text-[#EBA1BB]">
+            <Link href="/princess-party-farnham" className="font-bold underline underline-offset-2 text-[#EBA1BB]">
               Surrey
             </Link>
             ,{" "}
-            <Link href="/aboutme" className="font-bold underline underline-offset-2 text-[#EBA1BB]">
+            <Link href="/princess-party-basingstoke" className="font-bold underline underline-offset-2 text-[#EBA1BB]">
               Hampshire
             </Link>{" "}
             &{" "}
-            <Link href="/aboutme" className="font-bold underline underline-offset-2 text-[#EBA1BB]">
+            <Link href="/princess-party-surbiton" className="font-bold underline underline-offset-2 text-[#EBA1BB]">
               South-West London
             </Link>
             .

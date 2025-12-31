@@ -1,8 +1,8 @@
 import Surbiton from '@/maincontent/surbitonlocationscreen/surbitonlocationscreen';
 
 export const metadata = {
-  title: 'Princess Parties - Surbiton - Children\'s Parties',
-  description: 'Welcome to our children\'s party planning services',
+  title: 'Princess Parties Surbiton | Party Packages | Melodies with Milly',
+  description: 'Princess parties in Surbiton - explore more!',
 };
 
 export default function SurbitonScreen() {

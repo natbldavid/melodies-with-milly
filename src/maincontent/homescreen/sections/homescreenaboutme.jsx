@@ -86,8 +86,8 @@ export default function HomeScreenAboutMe() {
       backgroundRepeat: "repeat",
       backgroundSize: "200px 200px",
 
-      WebkitMaskImage: `url(${basePath}/images/transparentwaveimage.png)`,
-      maskImage: `url(${basePath}/images/transparentwaveimage.png)`,
+      WebkitMaskImage: `url(${basePath}/images/transparentwaveimage.avif)`,
+      maskImage: `url(${basePath}/images/transparentwaveimage.avif)`,
       WebkitMaskRepeat: "no-repeat",
       maskRepeat: "no-repeat",
       WebkitMaskSize: "cover",
@@ -100,7 +100,7 @@ export default function HomeScreenAboutMe() {
                 {/* Daisy in the middle */}
                 <div className="absolute left-1/2 top-1/2 -translate-y-1/2 z-20 translate-x-10 sm:translate-x-14 md:translate-x-14 lg:translate-x-16 w-24 h-24 sm:w-28 sm:h-28 md:w-38 md:h-38">
                   <Image
-                    src={`${basePath}/images/daisyfloweric.png`}
+                    src={`${basePath}/images/daisyfloweric.avif`}
                     alt=""
                     fill
                     className="object-contain"
@@ -131,8 +131,8 @@ export default function HomeScreenAboutMe() {
                 >
                   <div className="relative w-full h-full">
                     <Image
-                      src={`${basePath}/images/transparentsaboutme.png`}
-                      alt="About Milly"
+                      src={`${basePath}/images/caribbean-mermaid-princess-party-entertainer.avif`}
+                      alt="Princess entertainer smiling in costume"
                       fill
                       className="object-cover object-[50%_35%]"
                       priority

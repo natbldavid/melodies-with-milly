@@ -61,7 +61,7 @@ export default function EnquiriesForm() {
                   <div className="text-xs font-bold uppercase tracking-wide text-[#7684CE]">
                     Phone
                   </div>
-                  <div className="font-semibold">01234 567 890</div>
+                  <div className="font-semibold">07825180222</div>
                 </div>
               </div>
 
@@ -92,7 +92,7 @@ export default function EnquiriesForm() {
                   <div className="text-xs font-bold uppercase tracking-wide text-[#CE99AD]">
                     Email
                   </div>
-                  <div className="font-semibold">hello@princessparties.co.uk</div>
+                  <div className="font-semibold">melodieswithmilly@gmail.com</div>
                 </div>
               </div>
 
@@ -104,7 +104,7 @@ export default function EnquiriesForm() {
                 <div className="mt-3 flex items-center gap-3">
                   {/* Facebook */}
                   <a
-                    href="#"
+                    href="https://www.facebook.com/melodieswithmilly"
                     className="inline-flex h-10 w-10 items-center justify-center rounded-xl shadow-sm border hover:opacity-90"
                     style={{
                       backgroundColor: "rgba(255,255,255,0.85)",
@@ -125,7 +125,7 @@ export default function EnquiriesForm() {
 
                   {/* Instagram */}
                   <a
-                    href="#"
+                    href="https://www.instagram.com/melodieswithmilly/"
                     className="inline-flex h-10 w-10 items-center justify-center rounded-xl shadow-sm border hover:opacity-90"
                     style={{
                       backgroundColor: "rgba(255,255,255,0.85)",
@@ -152,7 +152,7 @@ export default function EnquiriesForm() {
 
                   {/* TikTok */}
                   <a
-                    href="#"
+                    href="https://www.tiktok.com/@melodieswithmilly"
                     className="inline-flex h-10 w-10 items-center justify-center rounded-xl shadow-sm border hover:opacity-90"
                     style={{
                       backgroundColor: "rgba(255,255,255,0.85)",

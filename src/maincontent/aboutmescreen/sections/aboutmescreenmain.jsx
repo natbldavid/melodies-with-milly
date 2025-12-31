@@ -50,8 +50,8 @@ export default function AboutMeScreenMain() {
     >
       {/* Image */}
       <Image
-        src={`${basePath}/images/transparentmirabel.png`}
-        alt="Milly"
+        src={`${basePath}/images/colombian-princess-party-entertainer.avif`}
+        alt="Colourful children’s party princess character smiling in costume"
         fill
         className="object-cover object-center"
         priority
@@ -112,7 +112,7 @@ export default function AboutMeScreenMain() {
 
               <div className="mt-8">
                 <Link
-                  href="/home"
+                  href="/enquiries"
                   className="
                     inline-flex items-center justify-center
                     rounded-full
