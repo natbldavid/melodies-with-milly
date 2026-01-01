@@ -72,7 +72,7 @@ export default function HomeScreenAboutMe() {
                 {/* Background texture behind the mask */}
 <div className="absolute inset-0 z-0 -translate-y-22 md:-translate-y-25 lg:-translate-y-10 scale-100 sm:scale-100 lg:scale-150">
   <Image
-    src={`${basePath}/images/transparentwaveimage.png`}
+    src={`${basePath}/images/transparentwaveimage.avif`}
     alt=""
     fill
     className="object-cover"
