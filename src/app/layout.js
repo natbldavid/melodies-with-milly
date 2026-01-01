@@ -3,7 +3,7 @@ import Header from '@/components/header/header';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
 import { Montserrat } from 'next/font/google';
-import { melodiesWithMillyJsonLd } from '@/lib/structuredData';
+import { MelodiesWithMillyJsonLd } from '@/lib/structuredData';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(melodiesWithMillyJsonLd),
+            __html: JSON.stringify(MelodiesWithMillyJsonLd),
           }}
         />
       </head>
