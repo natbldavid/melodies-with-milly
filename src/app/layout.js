@@ -3,6 +3,7 @@ import Header from '@/components/header/header';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
 import { Montserrat } from 'next/font/google';
+import { melodiesWithMillyJsonLd } from '@/lib/structuredData';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -18,6 +19,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.className}>
+            <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(melodiesWithMillyJsonLd),
+          }}
+        />
+      </head>
       <body className="flex flex-col min-h-screen">
         <Header />
         <Navbar />

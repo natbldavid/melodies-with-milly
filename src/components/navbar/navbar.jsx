@@ -11,6 +11,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [showFloatingMenu, setShowFloatingMenu] = useState(false);
 
+const clean = (p) => (p.length > 1 ? p.replace(/\/+$/, "") : p);
   const isActive = (href) => pathname === href;
 
 useEffect(() => {
@@ -88,7 +89,7 @@ useEffect(() => {
   return (
     <nav id="site-navbar" className="w-full shadow-sm">
       {/* Top white bar with logo (desktop + mobile) */}
-      <div className="relative h-[10vh] md:h-[15vh] bg-white border-b border-gray-200 flex items-center px-4 md:px-0">
+      <div className="relative h-[14vh] md:h-[15vh] bg-white border-b border-gray-200 flex items-center px-4 md:px-0">
         {/* Absolutely centered logo */}
         <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
 <div className="relative w-23 h-23 md:w-32 md:h-32">
