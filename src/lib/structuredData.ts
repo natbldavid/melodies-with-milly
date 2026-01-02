@@ -5,7 +5,7 @@ export const MelodiesWithMillyJsonLd = {
       "@type": "Organization",
       "name": "Melodies With Milly",
       "url": "https://www.melodieswithmilly.com/",
-      "logo": "https://static.wixstatic.com/media/854b69_0a625625e4754a63802fa079d6cfb5ec~mv2.jpeg/v1/crop/x_41,y_603,w_1374,h_820/fill/w_393,h_235,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/854b69_0a625625e4754a63802fa079d6cfb5ec~mv2.jpeg",
+      "logo": "https://www.melodieswithmilly.com/images/company-logo-official-small.avif",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+447825180222",
@@ -28,13 +28,13 @@ export const MelodiesWithMillyJsonLd = {
       "brand": {
         "@type": "Brand",
         "name": "Melodies With Milly",
-        "logo": "https://static.wixstatic.com/media/854b69_0a625625e4754a63802fa079d6cfb5ec~mv2.jpeg/v1/crop/x_41,y_603,w_1374,h_820/fill/w_393,h_235,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/854b69_0a625625e4754a63802fa079d6cfb5ec~mv2.jpeg"
+        "logo": "https://www.melodieswithmilly.com/images/company-logo-official-small.avif"
       }
     },
     {
       "@type": "LocalBusiness",
       "name": "Melodies With Milly",
-      "image": "https://static.wixstatic.com/media/854b69_0a625625e4754a63802fa079d6cfb5ec~mv2.jpeg/v1/crop/x_41,y_603,w_1374,h_820/fill/w_393,h_235,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/854b69_0a625625e4754a63802fa079d6cfb5ec~mv2.jpeg",
+      "image": "https://www.melodieswithmilly.com/images/company-logo-official-small.avif",
       "telephone": "+447825180222",
       "email": "melodieswithmilly@gmail.com",
       "url": "https://www.melodieswithmilly.com/",
@@ -46,7 +46,7 @@ export const MelodiesWithMillyJsonLd = {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "reviewCount": "19",
+        "reviewCount": "28",
         "source": "https://www.google.com/search?q=Melodies+With+Milly&oq=Melodies+With+Milly"
       },
       "review": [
@@ -124,7 +124,7 @@ export const MelodiesWithMillyJsonLd = {
         }
       ],
       "description": "Elevate your celebrations in South-West London, Surrey, and Hampshire with enchanting princess parties, delightful entertainment, and memorable visits. Our customisable princess packages, professional team, and local charm make every moment magical.",
-      "logo": "https://static.wixstatic.com/media/854b69_0a625625e4754a63802fa079d6cfb5ec~mv2.jpeg/v1/crop/x_41,y_603,w_1374,h_820/fill/w_393,h_235,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/854b69_0a625625e4754a63802fa079d6cfb5ec~mv2.jpeg",
+      "logo": "https://www.melodieswithmilly.com/images/company-logo-official-small.avif",
       "serviceType": "Princess Parties",
       "areaServed": {
         "@type": "Place",
@@ -148,7 +148,7 @@ export const MelodiesWithMillyJsonLd = {
         },
         {
           "@type": "WebPage",
-          "url": "https://www.melodieswithmilly.com/copy-of-one-entertainer-packages-1",
+          "url": "https://www.melodieswithmilly.com/virtual-packages",
           "name": "Virtual Packages"
         },
         {
@@ -163,7 +163,7 @@ export const MelodiesWithMillyJsonLd = {
         },
         {
           "@type": "WebPage",
-          "url": "https://www.melodieswithmilly.com/copy-of-one-entertainer-packages",
+          "url": "https://www.melodieswithmilly.com/two-entertainer-packages",
           "name": "2 character party packages"
         }
       ]

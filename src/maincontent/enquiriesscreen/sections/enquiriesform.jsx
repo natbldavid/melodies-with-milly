@@ -1,26 +1,187 @@
 "use client";
 
-import Link from "next/link";
+import { useMemo, useState } from "react";
+// import Link from "next/link"; // Not used; safe to remove.
+
+const FORM_ENDPOINT = "https://formspree.io/f/xeeokarn";
+
+const CHARACTER_OPTIONS = [
+  "Unsure",
+  "Ice Queen",
+  "Polynesian Princess",
+  "Princess Beauty",
+  "Snow Sister",
+  "Colombian Princess",
+  "Spider-Hero",
+  "Tower Princess",
+  "Starry Princess",
+  "Beauty Queen",
+  "Mermaid Princess",
+  "Melody, the Fairy Princess",
+  "Caribbean Mermaid",
+  "Arabian Princess",
+  "Southern Princess",
+  "Queen of Mean",
+  "Melody, the Elf",
+  "Winnie, the Witch",
+  "Non-Character Entertainer",
+  "Two Entertainers",
+  "Not sure / Undecided",
+];
+
+const PACKAGE_OPTIONS = [
+  "Unsure",
+  "Bronze 30 min",
+  "Silver 1hr",
+  "Gold 90 min",
+  "Diamond 2hr",
+  "Virtual Package",
+  "Not sure / Undecided",
+];
+
+const PARKING_OPTIONS = ["Unsure", "Yes", "No"];
+
+const initialFormState = {
+  name: "",
+  email: "",
+  phone: "",
+  character: "Unsure",
+  package: "Unsure",
+  childrenCount: "",
+  date: "",
+  time: "",
+  location: "",
+  parking: "Unsure",
+  message: "",
+};
 
 export default function EnquiriesForm() {
+  const [form, setForm] = useState(initialFormState);
+
+  // Submission UI state
+  const [submitting, setSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // null | "success" | "error"
+  const [submitError, setSubmitError] = useState("");
+
+  const update = (key) => (e) => {
+    setForm((prev) => ({ ...prev, [key]: e.target.value }));
+  };
+
+  const isFormValid = useMemo(() => {
+    const requiredText = ["name", "email", "phone", "location", "message"];
+    const requiredOther = ["character", "package", "childrenCount", "date", "time", "parking"];
+
+    const textOk = requiredText.every((k) => String(form[k]).trim().length > 0);
+    const otherOk = requiredOther.every((k) => String(form[k]).trim().length > 0);
+
+    const count = Number(form.childrenCount);
+    const childrenOk =
+      Number.isFinite(count) && form.childrenCount !== "" && count >= 0 && Number.isInteger(count);
+
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim());
+
+    return textOk && otherOk && childrenOk && emailOk;
+  }, [form]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitStatus(null);
+    setSubmitError("");
+
+    if (!isFormValid || submitting) return;
+
+    try {
+      setSubmitting(true);
+
+      // Send as JSON to Formspree (recommended for controlled React forms)
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          // Include a subject so the email is easy to identify
+          subject: "New party enquiry",
+
+          // IMPORTANT: keep `email` field named exactly `email` so Formspree can set Reply-To.
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          character: form.character,
+          package: form.package,
+          childrenCount: form.childrenCount,
+          date: form.date,
+          time: form.time,
+          location: form.location,
+          parking: form.parking,
+          message: form.message,
+        }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        // Formspree typically returns { errors: [{ message: "..." }, ...] }
+        const msg =
+          data?.errors?.map((er) => er?.message).filter(Boolean).join(" ") ||
+          "Something went wrong. Please try again.";
+        throw new Error(msg);
+      }
+
+      setSubmitStatus("success");
+      setForm(initialFormState);
+    } catch (err) {
+      setSubmitStatus("error");
+      setSubmitError(err?.message || "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  // Optional: success screen
+  if (submitStatus === "success") {
+    return (
+      <section className="bg-white">
+        <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+          <div
+            className="rounded-2xl p-6 sm:p-8 shadow-sm border bg-white"
+            style={{ borderColor: "rgba(118,132,206,0.25)" }}
+          >
+            <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-[#5E5A98]">
+              Thank you
+            </h2>
+            <p className="mt-2 text-sm text-[#6E6AA8]">
+              Your enquiry has been sent. We’ll get back to you shortly.
+            </p>
+            <button
+              type="button"
+              onClick={() => setSubmitStatus(null)}
+              className="mt-6 rounded-xl px-5 py-3 font-extrabold tracking-wide text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:ring-offset-2 hover:opacity-95"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(145,160,247,0.95), rgba(206,153,173,0.95), rgba(118,132,206,0.95))",
+                color: "#ffffff",
+              }}
+            >
+              Send another enquiry
+            </button>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="bg-white">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-10 md:py-14">
         {/* Top notice */}
         <p className="text-center text-sm sm:text-base font-medium text-[#6E6AA8]">
-          Use our enquiries form to get more information for your party. However, if you
-          wish to make a booking, please use our{" "}
-          <Link
-            href="/aboutme"
-            className="font-extrabold underline underline-offset-4 text-[#7684CE] hover:text-[#91A0F7]"
-          >
-            bookings form
-          </Link>
-          .
+          Use our enquiries form to get more information for your party.
         </p>
 
         {/* Main two-column layout */}
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:items-start">
           {/* LEFT: Contact info */}
           <div
             className="rounded-2xl p-6 sm:p-8 shadow-sm border"
@@ -42,7 +203,6 @@ export default function EnquiriesForm() {
                   style={{ backgroundColor: "rgba(255,241,232,0.9)" }}
                   aria-hidden="true"
                 >
-                  {/* Phone icon */}
                   <svg
                     width="18"
                     height="18"
@@ -72,7 +232,6 @@ export default function EnquiriesForm() {
                   style={{ backgroundColor: "rgba(255,241,232,0.9)" }}
                   aria-hidden="true"
                 >
-                  {/* Mail icon */}
                   <svg
                     width="18"
                     height="18"
@@ -187,13 +346,34 @@ export default function EnquiriesForm() {
               Send us a message and we’ll get back to you.
             </p>
 
-            <form className="mt-6 space-y-4">
+            {/* Status messages */}
+            {submitStatus === "error" && (
+              <div
+                className="mt-4 rounded-xl border px-4 py-3 text-sm"
+                style={{
+                  borderColor: "rgba(206,153,173,0.35)",
+                  backgroundColor: "rgba(253,223,223,0.35)",
+                  color: "#5E5A98",
+                }}
+              >
+                <div className="font-extrabold">Could not send your enquiry.</div>
+                <div className="mt-1">{submitError}</div>
+              </div>
+            )}
+
+            <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+              {/* Hidden subject (shows in the email subject line on many setups) */}
+              <input type="hidden" name="subject" value="New party enquiry" />
+
               {/* Name */}
               <div>
                 <label className="block text-xs font-extrabold uppercase tracking-wide text-[#7684CE]">
                   Name
                 </label>
                 <input
+                  name="name"
+                  value={form.name}
+                  onChange={update("name")}
                   type="text"
                   placeholder="Your name"
                   className="
@@ -205,6 +385,7 @@ export default function EnquiriesForm() {
                     borderColor: "rgba(118,132,206,0.25)",
                     backgroundColor: "rgba(255,242,235,0.45)",
                   }}
+                  required
                 />
               </div>
 
@@ -214,6 +395,9 @@ export default function EnquiriesForm() {
                   Email
                 </label>
                 <input
+                  name="email"
+                  value={form.email}
+                  onChange={update("email")}
                   type="email"
                   placeholder="you@example.com"
                   className="
@@ -225,6 +409,7 @@ export default function EnquiriesForm() {
                     borderColor: "rgba(206,153,173,0.25)",
                     backgroundColor: "rgba(253,223,223,0.35)",
                   }}
+                  required
                 />
               </div>
 
@@ -234,6 +419,9 @@ export default function EnquiriesForm() {
                   Phone
                 </label>
                 <input
+                  name="phone"
+                  value={form.phone}
+                  onChange={update("phone")}
                   type="tel"
                   placeholder="Your phone number"
                   className="
@@ -245,7 +433,189 @@ export default function EnquiriesForm() {
                     borderColor: "rgba(114,158,171,0.25)",
                     backgroundColor: "rgba(189,227,216,0.25)",
                   }}
+                  required
                 />
+              </div>
+
+              {/* Character */}
+              <div>
+                <label className="block text-xs font-extrabold uppercase tracking-wide text-[#7684CE]">
+                  Character
+                </label>
+                <select
+                  name="character"
+                  value={form.character}
+                  onChange={update("character")}
+                  className="
+                    mt-2 w-full rounded-xl border px-4 py-3
+                    text-sm text-[#5E5A98]
+                    focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:border-transparent
+                  "
+                  style={{
+                    borderColor: "rgba(118,132,206,0.25)",
+                    backgroundColor: "rgba(255,242,235,0.45)",
+                  }}
+                  required
+                >
+                  {CHARACTER_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Package */}
+              <div>
+                <label className="block text-xs font-extrabold uppercase tracking-wide text-[#CE99AD]">
+                  Package
+                </label>
+                <select
+                  name="package"
+                  value={form.package}
+                  onChange={update("package")}
+                  className="
+                    mt-2 w-full rounded-xl border px-4 py-3
+                    text-sm text-[#5E5A98]
+                    focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:border-transparent
+                  "
+                  style={{
+                    borderColor: "rgba(206,153,173,0.25)",
+                    backgroundColor: "rgba(253,223,223,0.35)",
+                  }}
+                  required
+                >
+                  {PACKAGE_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Number of children */}
+              <div>
+                <label className="block text-xs font-extrabold uppercase tracking-wide text-[#729EAB]">
+                  Number of children
+                </label>
+                <input
+                  name="childrenCount"
+                  value={form.childrenCount}
+                  onChange={update("childrenCount")}
+                  type="number"
+                  inputMode="numeric"
+                  min={0}
+                  step={1}
+                  placeholder="e.g. 12"
+                  className="
+                    mt-2 w-full rounded-xl border px-4 py-3
+                    text-sm text-[#5E5A98] placeholder:text-[#9A97C7]
+                    focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:border-transparent
+                  "
+                  style={{
+                    borderColor: "rgba(114,158,171,0.25)",
+                    backgroundColor: "rgba(189,227,216,0.25)",
+                  }}
+                  required
+                />
+              </div>
+
+              {/* Date */}
+              <div>
+                <label className="block text-xs font-extrabold uppercase tracking-wide text-[#7684CE]">
+                  Date
+                </label>
+                <input
+                  name="date"
+                  value={form.date}
+                  onChange={update("date")}
+                  type="date"
+                  className="
+                    mt-2 w-full rounded-xl border px-4 py-3
+                    text-sm text-[#5E5A98]
+                    focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:border-transparent
+                  "
+                  style={{
+                    borderColor: "rgba(118,132,206,0.25)",
+                    backgroundColor: "rgba(255,242,235,0.45)",
+                  }}
+                  required
+                />
+              </div>
+
+              {/* Time */}
+              <div>
+                <label className="block text-xs font-extrabold uppercase tracking-wide text-[#CE99AD]">
+                  Time
+                </label>
+                <input
+                  name="time"
+                  value={form.time}
+                  onChange={update("time")}
+                  type="time"
+                  className="
+                    mt-2 w-full rounded-xl border px-4 py-3
+                    text-sm text-[#5E5A98]
+                    focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:border-transparent
+                  "
+                  style={{
+                    borderColor: "rgba(206,153,173,0.25)",
+                    backgroundColor: "rgba(253,223,223,0.35)",
+                  }}
+                  required
+                />
+              </div>
+
+              {/* Location */}
+              <div>
+                <label className="block text-xs font-extrabold uppercase tracking-wide text-[#729EAB]">
+                  Location
+                </label>
+                <input
+                  name="location"
+                  value={form.location}
+                  onChange={update("location")}
+                  type="text"
+                  placeholder="Party address / venue (postcode helpful)"
+                  className="
+                    mt-2 w-full rounded-xl border px-4 py-3
+                    text-sm text-[#5E5A98] placeholder:text-[#9A97C7]
+                    focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:border-transparent
+                  "
+                  style={{
+                    borderColor: "rgba(114,158,171,0.25)",
+                    backgroundColor: "rgba(189,227,216,0.25)",
+                  }}
+                  required
+                />
+              </div>
+
+              {/* Parking */}
+              <div>
+                <label className="block text-xs font-extrabold uppercase tracking-wide text-[#7684CE]">
+                  Is parking available?
+                </label>
+                <select
+                  name="parking"
+                  value={form.parking}
+                  onChange={update("parking")}
+                  className="
+                    mt-2 w-full rounded-xl border px-4 py-3
+                    text-sm text-[#5E5A98]
+                    focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:border-transparent
+                  "
+                  style={{
+                    borderColor: "rgba(118,132,206,0.25)",
+                    backgroundColor: "rgba(255,242,235,0.45)",
+                  }}
+                  required
+                >
+                  {PARKING_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               {/* Message */}
@@ -254,6 +624,9 @@ export default function EnquiriesForm() {
                   Message
                 </label>
                 <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={update("message")}
                   rows={5}
                   placeholder="Tell us about your party..."
                   className="
@@ -266,18 +639,20 @@ export default function EnquiriesForm() {
                     borderColor: "rgba(118,132,206,0.25)",
                     backgroundColor: "rgba(255,242,235,0.45)",
                   }}
+                  required
                 />
               </div>
 
               {/* Submit */}
               <button
-                type="button"
+                type="submit"
+                disabled={!isFormValid || submitting}
                 className="
                   w-full rounded-xl py-3
                   font-extrabold tracking-wide text-sm
                   shadow-sm
                   focus:outline-none focus:ring-2 focus:ring-[#91A0F7] focus:ring-offset-2
-                  hover:opacity-95
+                  hover:opacity-95 disabled:opacity-50 disabled:cursor-not-allowed
                 "
                 style={{
                   background:
@@ -285,9 +660,14 @@ export default function EnquiriesForm() {
                   color: "#ffffff",
                 }}
               >
-                SEND
+                {submitting ? "SENDING..." : "SEND"}
               </button>
             </form>
+
+            {/* Small helper text */}
+            <p className="mt-3 text-xs text-[#6E6AA8]">
+              By submitting, you consent to being contacted regarding your enquiry.
+            </p>
           </div>
         </div>
       </div>
