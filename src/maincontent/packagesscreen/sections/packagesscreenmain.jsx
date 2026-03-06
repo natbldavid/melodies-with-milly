@@ -105,7 +105,7 @@ export default function PackagesScreenMain({ onNavigate }) {
           <PackageCard
             onClick={() => onNavigate("two-entertainer")}
             bg="#FFD6CE"
-            imgSrc={`${basePath}/images/two-entertainer-princess.avif`}
+            imgSrc={`${basePath}/images/two-entertainer-bronze-princess-party.avif`}
             imgAlt="Two Princess entertainment packages"
             title="Two Entertainer Packages"
           />
