@@ -112,8 +112,8 @@ export default function PackagesScreenHero() {
  
    {/* Center Text */}
    <h2 className="text-white font-extrabold font-more-sugar tracking-wide text-3xl sm:text-5xl z-10">
-     <span className="block">OUR</span>
-   <span className="block">PACKS</span>
+     <span className="block">MAKE-</span>
+   <span className="block">OVERS</span>
    </h2>
  
    {/* Right Fixed Image */}
@@ -127,16 +127,17 @@ export default function PackagesScreenHero() {
 
             {/* Medium only: md */}
 <h2 className="hidden sm:hidden md:block lg:hidden text-white font-extrabold font-more-sugar tracking-wide leading-none text-5xl">
-  OUR PACKS
+       <span className="block">MAKE-</span>
+   <span className="block">OVERS</span>
 </h2>
 
 {/* Desktop: lg+ */}
 <h2 className="hidden lg:block text-white font-extrabold font-more-sugar tracking-wide leading-none text-5xl lg:text-6xl">
-  OUR PACKAGES
+  LITTLE PRINCESS MAKEOVERS
 </h2>
 
             <p className="mt-6 text-white font-bold text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-              Explore our Party Packages and find the perfect one for you!
+              Get to know our amazing makeover options!
             </p>
           </div>
 

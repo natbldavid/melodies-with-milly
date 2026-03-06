@@ -17,8 +17,8 @@ function SocialIcon({ href, label, children }) {
 
 export default function Footer() {
   return (
-    <footer id="site-footer" style={{ backgroundColor: "#9CA9F9" }} className="mt-auto">
-      <div className="mx-auto w-full max-w-screen-2xl px-6 sm:px-8 py-12">
+    <footer id="site-footer" className="mt-auto">
+      <div style={{ backgroundColor: "#9CA9F9" }} className="mx-auto w-full max-w-screen-2xl px-6 sm:px-8 py-12">
         {/* 3 sections: stacked on mobile, 3 columns on md+ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 items-start">
           {/* LEFT: MENU */}
@@ -38,12 +38,21 @@ export default function Footer() {
                 <Link href="/enquiries" className="font-semibold hover:opacity-80 transition-opacity">
                 ENQUIRIES
               </Link>
+                <Link href="/packages" className="font-semibold hover:opacity-80 transition-opacity">
+                PACKAGES
+              </Link>
+                <Link href="/reviews" className="font-semibold hover:opacity-80 transition-opacity">
+                REVIEWS
+              </Link>
+              <Link href="/little-princess-makeovers" className="font-semibold hover:opacity-80 transition-opacity">
+                MAKEOVERS
+              </Link>
             </nav>
           </div>
 
           {/* MIDDLE: LOGO + DISCLAIMER */}
           <div className="text-white md:text-center">
-            <div className="font-extrabold flex md:justify-center text-2xl">
+            <div className="font-extrabold font-more-sugar flex md:justify-center text-2xl md:text-3xl lg:text-5xl">
             MELODIES WITH MILLY
             </div>
 
@@ -88,6 +97,9 @@ export default function Footer() {
               </div>
           </div>
         </div>
+      </div>
+      <div style={{ backgroundColor: "#F4E9F3" }} className="text-center py-4">
+        Created by Manatee Web Design
       </div>
     </footer>
   );

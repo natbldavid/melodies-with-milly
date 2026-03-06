@@ -1,17 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { basePath } from "@/lib/basePath";
 
-function PackageCard({ href, bg, imgSrc, imgAlt, title, imageOffsetY="translate-y-0" }) {
-  return (
-    <Link
-      href={href}
-      className="
-        group block w-full
-        focus:outline-none focus:ring-2 focus:ring-white/80 focus:ring-offset-2 focus:ring-offset-[#C9CAF8]
-      "
-      aria-label={title}
-    >
+function PackageCard({
+  href,
+  onClick,
+  bg,
+  imgSrc,
+  imgAlt,
+  title,
+  imageOffsetY = "translate-y-0",
+}) {
+  const sharedClasses = `
+    group block w-full
+    focus:outline-none focus:ring-2 focus:ring-white/80 focus:ring-offset-2 focus:ring-offset-[#C9CAF8]
+  `;
+
+  const CardInner = (
+    <>
       {/* Rectangular card: keep shape across breakpoints */}
       <div
         className="
@@ -55,11 +63,27 @@ function PackageCard({ href, bg, imgSrc, imgAlt, title, imageOffsetY="translate-
       <p className="mt-4 text-center font-extrabold text-lg sm:text-xl">
         {title}
       </p>
+    </>
+  );
+
+  // If onClick exists, render as a button (in-page swap)
+  if (onClick) {
+    return (
+      <button type="button" onClick={onClick} className={sharedClasses} aria-label={title}>
+        {CardInner}
+      </button>
+    );
+  }
+
+  // Otherwise render as a Link (real navigation)
+  return (
+    <Link href={href || "/"} className={sharedClasses} aria-label={title}>
+      {CardInner}
     </Link>
   );
 }
 
-export default function HomeScreenPackages() {
+export default function PackagesScreenMain({ onNavigate }) {
   return (
     <section>
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -69,7 +93,7 @@ export default function HomeScreenPackages() {
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           <PackageCard
-            href="/one-entertainer-packages"
+            onClick={() => onNavigate("one-entertainer")}
             bg="#FEE1B7"
             imgSrc={`${basePath}/images/snow-sister-princess-party-entertainer.avif`}
             imgAlt="One princess entertainment packages"
@@ -77,8 +101,9 @@ export default function HomeScreenPackages() {
             imageOffsetY="translate-y-20 md:translate-y-10 lg:translate-y-20"
           />
 
+          {/* These will swap views once you create the screens */}
           <PackageCard
-            href="/packages"
+            onClick={() => onNavigate("two-entertainer")}
             bg="#FFD6CE"
             imgSrc={`${basePath}/images/two-entertainer-princess.avif`}
             imgAlt="Two Princess entertainment packages"
@@ -86,7 +111,7 @@ export default function HomeScreenPackages() {
           />
 
           <PackageCard
-            href="/packages"
+            onClick={() => onNavigate("virtual-entertainer")}
             bg="#A1EABC"
             imgSrc={`${basePath}/images/virtual-package-princess.avif`}
             imgAlt="Princess virtual entertainment packages"

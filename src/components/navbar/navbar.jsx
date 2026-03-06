@@ -168,6 +168,14 @@ useEffect(() => {
         >
             PACKAGES
             </Link>
+              <Link
+            href="/testimonials"
+            className={`text-white font-bold pb-1 ${
+              isActive('/testimonials') ? 'border-b-2 border-white' : 'hover:text-blue-100'
+            }`}
+          >
+            REVIEWS
+          </Link>
         </div>
       </div>
 
@@ -257,6 +265,16 @@ useEffect(() => {
 >
     PACKAGES
 </Link>
+
+                <Link
+                  href="/testimonials"
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`font-semibold tracking-tight text-4xl sm:text-5xl ${
+                    isActive('/testimonials') ? 'text-[#EBA1BB]' : 'text-[#9CA9F9]'
+                  }`}
+                >
+                  TESTIMONIALS
+                </Link>
               </div>
             </div>
 
