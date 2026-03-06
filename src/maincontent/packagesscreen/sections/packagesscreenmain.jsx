@@ -113,10 +113,9 @@ export default function PackagesScreenMain({ onNavigate }) {
           <PackageCard
             onClick={() => onNavigate("virtual-entertainer")}
             bg="#A1EABC"
-            imgSrc={`${basePath}/images/virtual-package-princess.avif`}
+            imgSrc={`${basePath}/images/fun_beach_laptop.png`}
             imgAlt="Princess virtual entertainment packages"
             title="Virtual Packages"
-            imageOffsetY="-translate-y-15 md:-translate-y-8 lg:-translate-y-15"
           />
         </div>
       </div>

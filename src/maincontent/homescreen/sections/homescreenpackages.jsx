@@ -88,10 +88,9 @@ export default function HomeScreenPackages() {
           <PackageCard
             href="/packages"
             bg="#A1EABC"
-            imgSrc={`${basePath}/images/virtual-package-princess.avif`}
+            imgSrc={`${basePath}/images/fun_beach_laptop.png`}
             imgAlt="Princess virtual entertainment packages"
             title="Virtual Packages"
-            imageOffsetY="-translate-y-15 md:-translate-y-8 lg:-translate-y-15"
           />
         </div>
   <div className="mt-10 sm:mt-10 flex justify-center">
